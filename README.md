@@ -145,6 +145,14 @@ fixed4 _BaseColor;
   GetComponent<Renderer>().material.SetColor("_BaseColor",new Color(1,1,1,1));
     }
 ```
+### 【Unityシェーダ入門】透明なシェーダを作る
+
+
+### 【Unityシェーダ入門】氷のような半透明シェーダを作る
+
+
+### 【Unityシェーダ入門】リムライティングのシェーダを作る
+
 
 ## 参照資料
 https://github.com/shoeisha-books/hlsl-grimoire-sample  
