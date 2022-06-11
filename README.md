@@ -109,7 +109,14 @@ struct VSInput
 -ここではオブジェクトの基本色を定義しているAlbedoにRGB(0.1, 0.1, 0.1)を代入することで色を変更している
 
 ### 【Unityシェーダ入門】20行から始めるUnityミニマルシェーダ
+#### Inputで座標を入手
+・Vertexで変換された座標を取得する  
+・uv＿MainTexとかいろいろな座標を入手できる  
+・OutputはAlbedoとNormalを取得できる  
+＊色を塗るだけならInputは必要ないが、コンパイルが通らないので一応..  
 
+#### Surfで色を塗る
+・SurfaceOutPutStandardからAlbedoを入手して、色を指定  
 
 ## surfaceシェーダ入門
 
