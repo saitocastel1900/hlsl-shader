@@ -89,6 +89,9 @@ struct VSInput
 ・ゲームオブジェにマテリアルをアタッチして、シェーダーをCustom/シェーダーファイル名に設定（これでシェーダーファイルとマテリアルが紐づけられる）  
 ・サーフェスシェーダーの流れは頂点情報を処理→色を決める→ライティング  
 ・VertexとLightingはUnity側でやってくれるので色を決める工程をいじることにする  
+・Vertex:頂点座標を処理  
+・Surf:オブジェクトの色を決める  
+・Lighting:ライティング  
 ・実際にコードを観てみるとParameters(インスペクタに公開する変数)、Shader Settings(ライティングや透明度を設定)、Surface Shader(ここで色とかを決める)の3つのパートに分かれる
 ```
         //albedoを書き換える
@@ -106,10 +109,42 @@ struct VSInput
 -ここではオブジェクトの基本色を定義しているAlbedoにRGB(0.1, 0.1, 0.1)を代入することで色を変更している
 
 ### 【Unityシェーダ入門】20行から始めるUnityミニマルシェーダ
+#### Inputで座標を入手
+・Vertexで変換された座標を取得する  
+・uv＿MainTexとかいろいろな座標を入手できる  
+・OutputはAlbedoとNormalを取得できる  
+＊色を塗るだけならInputは必要ないが、コンパイルが通らないので一応..  
 
+#### Surfで色を塗る
+・SurfaceOutPutStandardからAlbedoを入手して、色を指定  
 
 ## surfaceシェーダ入門
-
+#### Albedoを公開してみる
+・Propertiesで色を公開  
+・スクリプトで色を変えたりもできる  
+```
+//公開するプロパティ
+Properties{
+        //Base Colorは公開する色の変数名
+        _BaseColor("Base Color",Color)=(1,1,1,1)
+        }
+        
+fixed4 _BaseColor;
+        
+        //色塗り
+ void surf (Input IN, inout SurfaceOutputStandard o)
+ {
+      //albedoは基本色
+      o.Albedo=_BaseColor.rgb;
+ }
+ 
+ #Script
+ void Start(){
+ //_BaseColorは公開されている変数名
+ //変数に値を設定
+  GetComponent<Renderer>().material.SetColor("_BaseColor",new Color(1,1,1,1));
+    }
+```
 
 ## 参照資料
 https://github.com/shoeisha-books/hlsl-grimoire-sample  
