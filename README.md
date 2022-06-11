@@ -123,7 +123,9 @@ struct VSInput
 ・Propertiesで色を公開  
 ・スクリプトで色を変えたりもできる  
 ```
+//公開するプロパティ
 Properties{
+        //Base Colorは公開する色の変数名
         _BaseColor("Base Color",Color)=(1,1,1,1)
         }
         
@@ -138,6 +140,8 @@ fixed4 _BaseColor;
  
  #Script
  void Start(){
+ //_BaseColorは公開されている変数名
+ //変数に値を設定
   GetComponent<Renderer>().material.SetColor("_BaseColor",new Color(1,1,1,1));
     }
 ```
