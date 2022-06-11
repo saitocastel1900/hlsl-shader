@@ -119,7 +119,28 @@ struct VSInput
 ・SurfaceOutPutStandardからAlbedoを入手して、色を指定  
 
 ## surfaceシェーダ入門
-
+#### Albedoを公開してみる
+・Propertiesで色を公開  
+・スクリプトで色を変えたりもできる  
+```
+Properties{
+        _BaseColor("Base Color",Color)=(1,1,1,1)
+        }
+        
+fixed4 _BaseColor;
+        
+        //色塗り
+ void surf (Input IN, inout SurfaceOutputStandard o)
+ {
+      //albedoは基本色
+      o.Albedo=_BaseColor.rgb;
+ }
+ 
+ #Script
+ void Start(){
+  GetComponent<Renderer>().material.SetColor("_BaseColor",new Color(1,1,1,1));
+    }
+```
 
 ## 参照資料
 https://github.com/shoeisha-books/hlsl-grimoire-sample  
