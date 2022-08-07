@@ -182,4 +182,5 @@ Tags { "Queue" = "Transparent" }
 ## 参照資料
 https://github.com/shoeisha-books/hlsl-grimoire-sample  
 https://nn-hokuson.hatenablog.com/entry/2018/02/15/140037  
-https://logicalbeat.jp/blog/11034/
+https://logicalbeat.jp/blog/11034/  
+https://zenn.dev/r_ngtm/books/shadergraph-cookbook
