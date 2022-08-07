@@ -147,6 +147,7 @@ fixed4 _BaseColor;
     }
 ```
 ### 【Unityシェーダ入門】透明なシェーダを作る
+![スクリーンショット 2022-08-08 004335](https://user-images.githubusercontent.com/96648305/183299178-76c41eca-251f-4808-b270-39f931b82094.png)
 ・Tagをsurface surf Standard alpha:fadeに変更  
 ・#pragmaにalpha:fadeを追加  
 ・Albedoに透明度を追加  
