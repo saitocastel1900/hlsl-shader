@@ -176,7 +176,41 @@ Tags { "Queue" = "Transparent" }
 
 ### 【Unityシェーダ入門】氷のような半透明シェーダを作る
 ![スクリーンショット 2022-08-08 010018](https://user-images.githubusercontent.com/96648305/183299879-1ab17cbe-5d35-4807-8137-1563cbca290b.png)  
+・法線ベクトルと視線ベクトルの追加
+・A値の計算式を変更
+```
+    Properties
+    {
+        _Alpha("Alpha", Range(0,1)) = 0.5
+               }
+    
+    SubShader
+    {
+        //法線ベクトル（ポリゴンの垂直方向のベクトル）と視線ベクトル（カメラが向いている方向のベクトル）の準備
+        struct Input
+        {
+            float3 worldNormal;
+            float3 viewDir;
+            };
 
+        float1 _Alpha;
+
+        //視線ベクトルと法線ベクトルから透明度を求める
+        //中央は並行、枠線は垂直であることを基に透明度を求める
+        void surf (Input IN, inout SurfaceOutputStandard o)
+        {
+           o.Albedo=fixed4(1,1,1,1);
+            //内積からなす角度を求める
+            float alpha=1-(abs(dot(IN.viewDir,IN.worldNormal)));
+            //_Alphaを掛けて微調整
+            o.Alpha=alpha*_Alpha;
+        }
+        ENDCG
+```
+
+- 法線ベクトル（ポリゴンの垂直方向のベクトル）と視線ベクトル（カメラが向いている方向のベクトル）を入力
+- リムライティングを使って表現
+- 中央と輪郭部分の内積の差で表現
 
 ### 【Unityシェーダ入門】リムライティングのシェーダを作る
 
