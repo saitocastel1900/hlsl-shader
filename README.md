@@ -95,6 +95,7 @@ struct VSInput
 ・実際にコードを観てみるとParameters(インスペクタに公開する変数)、Shader Settings(ライティングや透明度を設定)、Surface Shader(ここで色とかを決める)の3つのパートに分かれる
 ```
         //albedoを書き換える
+        //INを受け取り、SurfaceOutputStandardを出力する
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             // Albedo comes from a texture tinted by color
@@ -145,7 +146,46 @@ fixed4 _BaseColor;
   GetComponent<Renderer>().material.SetColor("_BaseColor",new Color(1,1,1,1));
     }
 ```
+### 【Unityシェーダ入門】透明なシェーダを作る
+![スクリーンショット 2022-08-08 004335](https://user-images.githubusercontent.com/96648305/183299178-76c41eca-251f-4808-b270-39f931b82094.png)  
+・Tagをsurface surf Standard alpha:fadeに変更  
+・#pragmaにalpha:fadeを追加  
+・Albedoに透明度を追加  
+
+```
+Tags { "Queue" = "Transparent" }
+        LOD 200
+
+        CGPROGRAM
+        // Physically based Standard lighting model, and enable shadows on all light types
+        #pragma surface surf Standard alpha:fade 
+        #pragma target 3.0
+        
+        //色塗り
+        void surf (Input IN, inout SurfaceOutputStandard o)
+        {
+            //albedoは基本色
+            o.Albedo=fixed4(0.6f, 0.7f, 0.4f, 1);
+            o.Alpha=0.5f;
+        }
+        ENDCG
+```
+- TagでQueueを指定(半透明なものを描画する際は、後から描画しないとバグるため)   
+- alpha:fadeで半透明が可能になる 　　
+- 後はA値を設定すれば半透明に  
+
+### 【Unityシェーダ入門】氷のような半透明シェーダを作る
+![スクリーンショット 2022-08-08 010018](https://user-images.githubusercontent.com/96648305/183299879-1ab17cbe-5d35-4807-8137-1563cbca290b.png)  
+
+
+### 【Unityシェーダ入門】リムライティングのシェーダを作る
+
 
 ## 参照資料
 https://github.com/shoeisha-books/hlsl-grimoire-sample  
 https://nn-hokuson.hatenablog.com/entry/2018/02/15/140037  
+https://logicalbeat.jp/blog/11034/  
+https://zenn.dev/r_ngtm/books/shadergraph-cookbook  
+
+## 使用モデル元
+http://graphics.stanford.edu/data/3Dscanrep/
