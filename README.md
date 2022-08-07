@@ -147,7 +147,7 @@ fixed4 _BaseColor;
     }
 ```
 ### 【Unityシェーダ入門】透明なシェーダを作る
-![スクリーンショット 2022-08-08 004335](https://user-images.githubusercontent.com/96648305/183299178-76c41eca-251f-4808-b270-39f931b82094.png)
+![スクリーンショット 2022-08-08 004335](https://user-images.githubusercontent.com/96648305/183299178-76c41eca-251f-4808-b270-39f931b82094.png)  
 ・Tagをsurface surf Standard alpha:fadeに変更  
 ・#pragmaにalpha:fadeを追加  
 ・Albedoに透明度を追加  
@@ -175,6 +175,7 @@ Tags { "Queue" = "Transparent" }
 - 後はA値を設定すれば半透明に  
 
 ### 【Unityシェーダ入門】氷のような半透明シェーダを作る
+![スクリーンショット 2022-08-08 010018](https://user-images.githubusercontent.com/96648305/183299879-1ab17cbe-5d35-4807-8137-1563cbca290b.png)  
 
 
 ### 【Unityシェーダ入門】リムライティングのシェーダを作る
