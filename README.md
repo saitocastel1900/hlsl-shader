@@ -263,6 +263,10 @@ Tags { "Queue" = "Transparent" }
 - おおよそは前回の物  
 - o.Emissionにを代入することで、輪郭のみを光らせている
 
+### 【Unityシェーダ入門】テクスチャを表示する
+### 【Unityシェーダ入門】ステンドグラスのシェーダを作る
+### 【Unityシェーダ入門】uvスクロールで水面を動かす
+
 ## 参照資料
 https://github.com/shoeisha-books/hlsl-grimoire-sample  
 https://nn-hokuson.hatenablog.com/entry/2018/02/15/140037  
