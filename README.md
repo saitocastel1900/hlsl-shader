@@ -146,7 +146,28 @@ fixed4 _BaseColor;
     }
 ```
 ### 【Unityシェーダ入門】透明なシェーダを作る
+・Tagをsurface surf Standard alpha:fadeに変更  
+・#pragmaにalpha:fadeを追加  
+・Albedoに透明度を追加  
 
+```
+Tags { "Queue" = "Transparent" }
+        LOD 200
+
+        CGPROGRAM
+        // Physically based Standard lighting model, and enable shadows on all light types
+        #pragma surface surf Standard alpha:fade 
+        #pragma target 3.0
+        
+        //色塗り
+        void surf (Input IN, inout SurfaceOutputStandard o)
+        {
+            //albedoは基本色
+            o.Albedo=fixed4(0.6f, 0.7f, 0.4f, 1);
+            o.Alpha=0.5f;
+        }
+        ENDCG
+```
 
 ### 【Unityシェーダ入門】氷のような半透明シェーダを作る
 
