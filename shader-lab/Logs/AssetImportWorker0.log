@@ -1048,3 +1048,9 @@ Received Import Request.
   path: Assets/Scenes/Ice.unity
   artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/Ice.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '806e350b61044337ac00aa2dceafeef4') in 0.004058 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6488.734715 seconds.
+  path: Assets/Shaders/tutorialShader/shader02.shader
+  artifactKey: Guid(e658400b1ee282745b9f00cd0e7e643f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/tutorialShader/shader02.shader using Guid(e658400b1ee282745b9f00cd0e7e643f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a62aa9c33de32424adac9038c2afe2e5') in 0.144231 seconds 
