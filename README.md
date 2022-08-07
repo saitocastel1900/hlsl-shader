@@ -213,7 +213,8 @@ Tags { "Queue" = "Transparent" }
 - 中央と輪郭部分の内積の差で表現
 
 ### 【Unityシェーダ入門】リムライティングのシェーダを作る
-![スクリーンショット 2022-08-08 040655](https://user-images.githubus ercontent.com/96648305/183307162-19cdc82b-2c27-45b5-8514-1ea759a5b1ae.png)  
+![スクリーンショット 2022-08-08 040655](https://user-images.githubusercontent.com/96648305/183307171-cd74e7c3-3b87-454a-9d62-7c2ef837e48c.png)  
+
 
 ・リムライティングとは、オブジェクトに後ろから光を当てて、輪郭を光らせる事  
 ・前回の物を流用（Emmisionを色々いじる）  
