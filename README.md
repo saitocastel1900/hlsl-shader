@@ -95,6 +95,7 @@ struct VSInput
 ・実際にコードを観てみるとParameters(インスペクタに公開する変数)、Shader Settings(ライティングや透明度を設定)、Surface Shader(ここで色とかを決める)の3つのパートに分かれる
 ```
         //albedoを書き換える
+        //INを受け取り、SurfaceOutputStandardを出力する
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             // Albedo comes from a texture tinted by color
