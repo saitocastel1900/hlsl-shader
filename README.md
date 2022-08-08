@@ -297,6 +297,44 @@ Tags { "Queue" = "Transparent" }
 - fullforwardshadowsにすることで、影のつけ方を増やすことが出来る  
 
 ### 【Unityシェーダ入門】ステンドグラスのシェーダを作る
+・ステンドグラスみたいなマテリアルを再現する  
+・黒以外を透明にする(グレースケールを利用して判定)  
+![スクリーンショット 2022-08-08 154941](https://user-images.githubusercontent.com/96648305/183356690-0d6cef29-f1a9-417a-812a-da17c5cf723c.png)　
+
+```
+Properties{
+		//テクスチャ設定前のべた塗を指定できる(red,white,blakc)
+			_MainTex("テクスチャ", 2D) = "red"{}
+	}
+		SubShader{
+			Tags { "Queue" = "Transparent"  }
+			LOD 200
+
+			CGPROGRAM
+		//fullforwardshadowsにすれば影が色々着く
+			#pragma surface surf Standard  alpha:fade
+			#pragma target 3.0
+
+			//テクスチャを設定するために、uv座標を入手
+			struct Input {
+				float2 uv_MainTex;
+			};
+
+			//2Dテクスチャ＝＝sampler2D
+			sampler2D _MainTex;
+
+			void surf(Input IN, inout SurfaceOutputStandard o) {
+				//tex2D関数でテクスチャの色を得る
+				fixed4 c = tex2D(_MainTex, IN.uv_MainTex);
+				o.Albedo=c.rgb;
+				//グレースケール化して、明度から黒かそれ以外かを求める(黒:1,それ以外:0.5)
+				o.Alpha=(c.r*0.3 + c.g*0.6 + c.b*0.1 < 0.2) ? 1 : 0.5;
+			}
+			ENDCG
+```
+- 0.3 * R + 0.6 * G + 0.1 * B　でグレースケールに変換して明度を求め、透明度を指定する  
+- 黒はふと海、それ以外は透明になる
+
 ### 【Unityシェーダ入門】uvスクロールで水面を動かす
 
 ## 参照資料
