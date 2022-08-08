@@ -266,6 +266,7 @@ Tags { "Queue" = "Transparent" }
 ### 【Unityシェーダ入門】テクスチャを表示する
 ・テクスチャを公開して設定する  
 ・テクスチャからuv座標で、必要な色を求める(text2D関数)
+![スクリーンショット 2022-08-08 152133](https://user-images.githubusercontent.com/96648305/183353463-2c8b304b-103b-478d-9dbb-bb9dd3f0d020.png)  
 
 ```
 //公開するテクスチャプロパティ
@@ -293,6 +294,7 @@ Tags { "Queue" = "Transparent" }
 			}
 			ENDCG
 ```
+- fullforwardshadowsにすることで、影のつけ方を増やすことが出来る  
 
 ### 【Unityシェーダ入門】ステンドグラスのシェーダを作る
 ### 【Unityシェーダ入門】uvスクロールで水面を動かす
