@@ -379,6 +379,7 @@ https://github.com/shoeisha-books/hlsl-grimoire-sample
 https://nn-hokuson.hatenablog.com/entry/2018/02/15/140037  
 https://logicalbeat.jp/blog/11034/  
 https://zenn.dev/r_ngtm/books/shadergraph-cookbook  
+https://zenn.dev/kento_o/articles/bc059ba41d447b65e0d1
 
 ## 使用モデル元
 http://graphics.stanford.edu/data/3Dscanrep/
