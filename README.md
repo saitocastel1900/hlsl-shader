@@ -339,7 +339,7 @@ Properties{
 ・単純にuv座標を移動させることで表現
 ![スクリーンショット 2022-08-09 192537](https://user-images.githubusercontent.com/96648305/183626538-9a66bb02-9ab9-40be-8cfa-def6ec959fe2.png)  
 
-///
+```
 /公開するテクスチャプロパティ
 	Properties{
 		//テクスチャ設定前のべた塗を指定できる(red,white,blakc)
@@ -367,7 +367,7 @@ Properties{
 				o.Albedo = tex2D(_MainTex, uv);
 				
 			}
-///
+```
 - _TimeはUnity組込みプロパティで、時間を表す  
 
 ## 参照資料
