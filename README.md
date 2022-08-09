@@ -373,6 +373,35 @@ Properties{
 ### 【Unityシェーダ入門】テクスチャをブレンドして自然な地形を表示する
 ### 【Unityシェーダ入門】シェーダで作るノイズ５種盛り
 ### 【Unityシェーダ入門】円やリングをかっこよく動かす方法
+・原点からworld座標（無限）の距離を求めて、指定した半径内を一定の色で塗り、それ以外を異なる色で塗ることで実装  
+![スクリーンショット 2022-08-10 053620](https://user-images.githubusercontent.com/96648305/183756482-dc8fce11-af57-47ec-95aa-18e4df9cc1a4.png)  
+
+```
+//ワールド座標を基準に円を書くため、ワールド座標を設定
+		struct Input {
+			float3 worldPos;
+		};
+
+		void surf(Input IN, inout SurfaceOutputStandard o) 
+		{
+			
+		//半径の距離を測る(0~)
+		float dist = distance(fixed3(0,0,0),IN.worldPos);
+		
+		//半径
+		float radius = 2 ;
+
+			//半径内は白で、それ以外は紫で塗る
+			if (radius < dist)
+			{
+				o.Albedo = fixed4(110 / 255.0,87 / 255.0,139 / 255.0,1);
+			}
+			else
+			{
+				o.Albedo = fixed4(1,1,1,1);
+			}
+
+```
 
 ## 参照資料
 https://github.com/shoeisha-books/hlsl-grimoire-sample  
