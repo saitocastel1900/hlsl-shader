@@ -370,6 +370,10 @@ Properties{
 ```
 - _TimeはUnity組込みプロパティで、時間を表す  
 
+### 【Unityシェーダ入門】テクスチャをブレンドして自然な地形を表示する
+### 【Unityシェーダ入門】シェーダで作るノイズ５種盛り
+### 【Unityシェーダ入門】円やリングをかっこよく動かす方法
+
 ## 参照資料
 https://github.com/shoeisha-books/hlsl-grimoire-sample  
 https://nn-hokuson.hatenablog.com/entry/2018/02/15/140037  
