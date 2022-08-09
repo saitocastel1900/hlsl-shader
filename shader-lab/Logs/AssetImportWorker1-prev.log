@@ -15,7 +15,7 @@ C:/Users/2022019/Documents/GitHub/hlsl-shader/shader-lab
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-57386
+53587
 Successfully changed project path to: C:/Users/2022019/Documents/GitHub/hlsl-shader/shader-lab
 C:/Users/2022019/Documents/GitHub/hlsl-shader/shader-lab
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/2022019/Documents/GitHub/hlsl-shader/shader-lab
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 200.29 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 327.43 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/2021.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -63,92 +63,93 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/2021.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56004
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56636
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/2021.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006368 seconds.
+Registered in 0.256587 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 123.94 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 433.98 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.070 seconds
+- Completed reload, in  7.582 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1071ms)
-		BeginReloadAssembly (101ms)
+	ReloadAssembly (7586ms)
+		BeginReloadAssembly (436ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (774ms)
-			LoadAssemblies (100ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (6469ms)
+			LoadAssemblies (427ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (169ms)
+			SetupTypeCache (313ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (45ms)
-			SetupLoadedEditorAssemblies (486ms)
+			RebuildScriptCaches (145ms)
+			SetupLoadedEditorAssemblies (5837ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (82ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (124ms)
-				BeforeProcessingInitializeOnLoad (3ms)
-				ProcessInitializeOnLoadAttributes (182ms)
-				ProcessInitializeOnLoadMethodAttributes (94ms)
+				InitializePlatformSupportModulesInManaged (988ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (434ms)
+				BeforeProcessingInitializeOnLoad (4ms)
+				ProcessInitializeOnLoadAttributes (1431ms)
+				ProcessInitializeOnLoadMethodAttributes (2976ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (3ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.008055 seconds.
+Registered in 0.140904 seconds.
+Android Extension - Scanning For ADB Devices 11797 ms
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\2022019\Documents\GitHub\hlsl-shader\shader-lab\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\2022019\Documents\GitHub\hlsl-shader\shader-lab\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.93 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.735 seconds
+- Completed reload, in  4.774 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1736ms)
-		BeginReloadAssembly (274ms)
+	ReloadAssembly (4777ms)
+		BeginReloadAssembly (731ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
+			DisableScriptedObjects (56ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (146ms)
-		EndReloadAssembly (1295ms)
-			LoadAssemblies (175ms)
+			CreateAndSetChildDomain (85ms)
+		EndReloadAssembly (3409ms)
+			LoadAssemblies (2049ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (411ms)
+			SetupTypeCache (643ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (83ms)
-			SetupLoadedEditorAssemblies (557ms)
+			RebuildScriptCaches (138ms)
+			SetupLoadedEditorAssemblies (816ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (19ms)
+				InitializePlatformSupportModulesInManaged (32ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (129ms)
-				ProcessInitializeOnLoadAttributes (350ms)
-				ProcessInitializeOnLoadMethodAttributes (50ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (0ms)
+				BeforeProcessingInitializeOnLoad (187ms)
+				ProcessInitializeOnLoadAttributes (514ms)
+				ProcessInitializeOnLoadMethodAttributes (65ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (3ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (13ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
-Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.11 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3373 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (55.7 KB). Loaded Objects now: 3835.
-Memory consumption went from 122.7 MB to 122.6 MB.
-Total: 4.862300 ms (FindLiveObjects: 0.629400 ms CreateObjectMapping: 0.529800 ms MarkObjects: 3.556300 ms  DeleteObjects: 0.144500 ms)
+Unloading 3376 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (56.1 KB). Loaded Objects now: 3842.
+Memory consumption went from 124.6 MB to 124.5 MB.
+Total: 9.386500 ms (FindLiveObjects: 0.498200 ms CreateObjectMapping: 0.390700 ms MarkObjects: 8.369600 ms  DeleteObjects: 0.126200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -162,7 +163,25 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 67650.375735 seconds.
-  path: Assets/Scenes/Ice 1.unity
-  artifactKey: Guid(8b0d8fbf5a5742449b102e9bd2a1635d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Ice 1.unity using Guid(8b0d8fbf5a5742449b102e9bd2a1635d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce68cffbd39f64e9fe5e173817afa431') in 0.012270 seconds 
+  Time since last request: 37729.918457 seconds.
+  path: Assets/Materials/TextureMaterial.mat
+  artifactKey: Guid(fda23d14b7527a74c897d8f720bba480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TextureMaterial.mat using Guid(fda23d14b7527a74c897d8f720bba480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4123a3cf7f5d45fc4228b03f5b9a5929') in 0.316922 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1697.822079 seconds.
+  path: Assets/Materials/TurtrialMaterial.mat
+  artifactKey: Guid(665edfa54f30be942bc91c340fccf0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TurtrialMaterial.mat using Guid(665edfa54f30be942bc91c340fccf0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9390d8a977eeeffc97b34f3e12b4b0fd') in 0.446745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.268447 seconds.
+  path: Assets/Materials/TextureMaterial.mat
+  artifactKey: Guid(fda23d14b7527a74c897d8f720bba480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TextureMaterial.mat using Guid(fda23d14b7527a74c897d8f720bba480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '186848c8c44d76d4fba78185d3207882') in 0.064323 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 109.543249 seconds.
+  path: Assets/Materials/UvScrollMaterial.mat
+  artifactKey: Guid(20da5deedee62e8409e48c8b5e201342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/UvScrollMaterial.mat using Guid(20da5deedee62e8409e48c8b5e201342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b188d91ec165b219fa8505eb2e60d30') in 1.401844 seconds 
