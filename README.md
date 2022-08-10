@@ -423,6 +423,8 @@ float dist = distance(fixed3(0,0,0),IN.worldPos);
 ```
 
 ```
+- sin関数を使うことで-1~1を滑らかにとり
+- sin関数にabs関数を使うことで、0~1の値をとっている
 
 ## 参照資料
 https://github.com/shoeisha-books/hlsl-grimoire-sample  
