@@ -402,6 +402,27 @@ Properties{
 			}
 
 ```
+・リングを作ってみる
+![スクリーンショット 2022-08-10 235721](https://user-images.githubusercontent.com/96648305/183937349-8819f8ff-6430-4b83-82c0-c4f2ce203c1f.png)  
+```
+float dist = distance(fixed3(0,0,0),IN.worldPos);
+		//半径
+		float radius = 2 ;
+
+			//半径以上かつ、半径より2大きい場所を塗る(円の外枠を塗る)
+			if (dist>=radius&&dist<radius+0.2)
+			{
+					o.Albedo = fixed4(1,1,1,1);
+			}
+			else
+			{
+					o.Albedo = fixed4(110 / 255.0,87 / 255.0,139 / 255.0,1);
+			}
+```
+・複数円を作ってみる
+```
+
+```
 
 ## 参照資料
 https://github.com/shoeisha-books/hlsl-grimoire-sample  
