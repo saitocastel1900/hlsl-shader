@@ -419,12 +419,59 @@ float dist = distance(fixed3(0,0,0),IN.worldPos);
 					o.Albedo = fixed4(110 / 255.0,87 / 255.0,139 / 255.0,1);
 			}
 ```
-・複数円を作ってみる
-```
+・複数円を作って動かす
+![スクリーンショット 2022-08-11 034846](https://user-images.githubusercontent.com/96648305/183993338-a407e896-2ab2-486b-bcb4-ca867f937afe.png)  
 
 ```
-- sin関数を使うことで-1~1を滑らかにとり
-- sin関数にabs関数を使うことで、0~1の値をとっている
+Properties{
+			_t("線の数", int) = 3
+			weight("線の太さ", float) = 0.9
+	}
+	SubShader{
+		
+		Tags { "RenderType" = "Opaque"  }
+		LOD 200
+
+		CGPROGRAM
+		#pragma surface surf Standard 
+		#pragma target 3.0
+
+		//ワールド座標を基準に円を書くため、ワールド座標を設定
+		struct Input {
+			float3 worldPos;
+		};
+
+	int _t = 0;
+	float weight = 0.9;
+
+		void surf(Input IN, inout SurfaceOutputStandard o) 
+		{
+			
+		//半径の距離を測る(0~)
+		float dist = distance(fixed3(0,0,0),IN.worldPos);
+		//0~1 *_t
+		float val = abs(sin(dist* _t- _Time*100));
+		//半径
+		float radius = 2 ;
+
+			//distが横軸（変動）
+			//dist*3 >=0.9
+			//頂点付近のみを塗る
+			if (val>= weight)
+			{
+					o.Albedo = fixed4(1,1,1,1);
+			}
+			else
+			{
+					o.Albedo = fixed4(110 / 255.0,87 / 255.0,139 / 255.0,1);
+			}
+
+		}
+```
+- sin関数を使うことで-1~1を滑らかにとり  
+- sin関数にabs関数を使うことで、0~1の値をとっている 
+- absの影響で円が同時に二つできる  
+- 動きは_Timeを加えることで表現
 
 ## 参照資料
 https://github.com/shoeisha-books/hlsl-grimoire-sample  
