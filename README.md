@@ -410,10 +410,45 @@ Properties
 ### 【Unityシェーダ入門】シェーダで作るノイズ５種盛り
 #### ランダムノイズ 
 ・ 所謂テレビの砂嵐をrandmで表現  
-・ 
-・ 
+・ 一点一点の画素に対してランダムに濃淡を代入している
+```
+float random(fixed2 p)
+        {
+            //frac：小数点を返す
+            //dot：内積をもとめる
+            return frac(sin(dot(p, fixed2(12.9898,78.233)))*43758.5453);
+        }
+        
+        void surf(Input IN, inout SurfaceOutputStandard o)
+        {
+           float c= random(IN.uv_MainTex);
+            o.Albedo= fixed4(c,c,c,1);
+        }
+```
 
 #### ブロックノイズ
+・ ドットのノイズ  
+・ ブロックごとの代表的な一点の色をもとにべた塗している
+```
+float noise(fixed2 st)
+        {
+            //ここで代表の一点を決めている
+            fixed2 p =floor(st); //小数の整数部分を返す
+            //つまり（x,y）
+            //floor(1,0,1,0)=>(1,1)の点を代表に
+            //floor(1,2,1,4)=>(1,1)の点を代表に
+            //floor(1,3,1,9)=>(1,1)の点を代表に
+            //なので xが1~2,yが1~2の色が一定に決まる
+            return random(p);
+        }
+        
+        void surf(Input IN, inout SurfaceOutputStandard o)
+        {
+           float c= noise(IN.uv_MainTex*12);
+            o.Albedo= fixed4(c,c,c,1);
+        }
+		ENDCG
+```
 
 #### パーリンノイズ
 
