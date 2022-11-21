@@ -565,6 +565,8 @@ Properties{
 
 ### 【Unityシェーダ入門】頂点カラーを表示するシェーダを作る
 
+### 【Unityシェーダ入門】シェーダで旗や水面をなびかせる
+
 ## 参照資料
 https://github.com/shoeisha-books/hlsl-grimoire-sample  
 https://nn-hokuson.hatenablog.com/entry/2018/02/15/140037  
